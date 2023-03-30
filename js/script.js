@@ -3,8 +3,9 @@
 //    console.log('Links :', links);
 // });
 
-const titleClickHandler = function(event){
+const titleClickHandler = function (event) {
    console.log('Link was clicked!');
+   console.log('Event is :', event);
 
    /* remove class 'active' from all article links  */
 
@@ -21,7 +22,7 @@ const titleClickHandler = function(event){
 
 const links = document.querySelectorAll('.titles a');
 
-for (let link of links){
+for (let link of links) {
    link.addEventListener('click', titleClickHandler);
 }
 
