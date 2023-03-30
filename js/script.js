@@ -6,6 +6,7 @@
 
 const titleClickHandler = function (event) {
    const clickedElement = this;
+   event.preventDefault();
    console.log('Link was clicked!');
 
 
@@ -17,7 +18,7 @@ const titleClickHandler = function (event) {
       activeLink.classList.remove('active');
    }
 
-   /* [IN PROGRES] add class 'active' to the clicked link */
+   /* [DONE] add class 'active' to the clicked link */
 
    clickedElement.classList.add('active');
    console.log('clickedElement:', clickedElement);
