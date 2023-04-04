@@ -47,11 +47,7 @@
       targetArticle.classList.add('active');
    }
 
-   const links = document.querySelectorAll('.titles a');
 
-   for (let link of links) {
-      link.addEventListener('click', titleClickHandler);
-   }
 
    const optArticleSelector = '.post',
       optTitleSelector = '.post-title',
@@ -91,7 +87,16 @@
 
          html = html + linkHTML;
       }
+
       titleList.innerHTML = html;
+
+      const links = document.querySelectorAll('.titles a');
+      console.log('Bug is :', links);
+
+      for (let link of links) {
+         link.addEventListener('click', titleClickHandler);
+      }
+
    }
    generateTitleLinks();
 }
