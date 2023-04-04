@@ -65,10 +65,13 @@
       // console.log('Whatn is it ?', titleList);
 
       titleList.innerHTML = '';
+
       /* for each article */
 
       const articles = document.querySelectorAll(optArticleSelector);
-      
+
+      let html = '';
+
       for (let article of articles) {
 
          /* get the article id */
@@ -76,17 +79,24 @@
          const articleId = article.getAttribute('id');
          console.log('articleID is :', articleId);
 
-         /* find the title element */
+         /* find the title element */ /* get the title from the title element */
 
-         /* get the title from the title element */
+         const articleTitle = article.querySelector(optTitleSelector).innerHTML;
 
          /* create HTML of the link */
 
+         const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+
          /* insert link into titleList */
+
+         html = html + linkHTML;
+
+         titleList.innerHTML = html;
+
       }
-
+      // generateTitleLinks();
    }
-
-   generateTitleLinks();
-
+   // generateTitleLinks();
 }
+// generateTitleLinks();
+
