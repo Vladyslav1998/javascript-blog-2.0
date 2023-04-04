@@ -90,13 +90,10 @@
          /* insert link into titleList */
 
          html = html + linkHTML;
-
-         titleList.innerHTML = html;
-
       }
-      // generateTitleLinks();
+      titleList.innerHTML = html;
    }
-   // generateTitleLinks();
+   generateTitleLinks();
 }
-// generateTitleLinks();
+
 
