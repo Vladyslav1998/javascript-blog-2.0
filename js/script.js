@@ -97,20 +97,21 @@
 
 function generateTags() {
    /* find all articles */
-   const articles = document.querySelectorAll('.post');
+   const articles = document.querySelectorAll(optArticleSelector);
 
    /* START LOOP: for every article: */
    for (let article of articles) {
 
       /* find tags wrapper */
-      const titleList = article.querySelector('.post-tags .list');
+      const tagsList = article.querySelectorAll(optArticleTagsSelector);
+      console.log('co tu jest', tagsList);
 
       /* make html variable with empty string */
       let html = '';
 
       /* get tags from data-tags attribute */
-      const articleTags = article.getAttribute('href');
-      
+      const articleTags = article.getAttribute('data-tags');
+
       /* split tags into array */
 
       /* START LOOP: for each tag */
