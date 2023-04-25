@@ -103,8 +103,7 @@ function generateTags() {
    for (let article of articles) {
 
       /* find tags wrapper */
-      const tagsList = article.querySelectorAll(optArticleTagsSelector);
-      console.log('co tu jest', tagsList);
+      const titleList = article.querySelector(optArticleTagsSelector);
 
       /* make html variable with empty string */
       let html = '';
