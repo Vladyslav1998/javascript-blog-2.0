@@ -1,6 +1,11 @@
 {
    'use strict';
 
+   const optArticleSelector = '.post',
+      optTitleSelector = '.post-title',
+      optTitleListSelector = '.titles',
+      optArticleTagsSelector = '.post-tags .list';
+
    const titleClickHandler = function (event) {
       event.preventDefault();
       const clickedElement = this;
@@ -41,11 +46,6 @@
 
       targetArticle.classList.add('active');
    }
-
-   const optArticleSelector = '.post',
-      optTitleSelector = '.post-title',
-      optTitleListSelector = '.titles',
-      optArticleTagsSelector = '.post-tags .list';
 
    function generateTitleLinks() {
 
